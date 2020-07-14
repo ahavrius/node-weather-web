@@ -1,0 +1,37 @@
+h1 {
+    color: green;
+}
+
+body {
+    max-width: 650px;
+    font-family: Arial;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 50vw;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+footer {
+    color: grey;
+    border-top: 1px solid khaki;
+    margin-top: 16px;
+    padding: 16px;
+}
+
+header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+header a{
+    margin-right: 16px;
+    font-size: large;
+    color: peru ;
+    text-decoration: none;
+}
+
