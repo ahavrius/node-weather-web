@@ -15,7 +15,12 @@ const forcast = (lan, lon, callback) => {
         {
             callback(undefined, {
                 temperature: body.current.temperature,
-                description: body.current.weather_descriptions[0]
+                description: body.current.weather_descriptions[0],
+                feelslike : body.current.feelslike,
+                str: `
+                temperature ${body.current.temperature},
+                ${body.current.weather_descriptions[0]},
+                feels like ${body.current.feelslike}`
             })
         }
     });

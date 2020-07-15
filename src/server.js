@@ -48,7 +48,7 @@ app.get('/weather', (req, res) => {
             return res.send({
                 errorMessage: error
             })
-            forcast(latitude, longitude, (error, {temperature, description}={}) => {
+            forcast(latitude, longitude, (error, {str}={}) => {
                 if (error)
                     return res.send({
                         errorMessage: error
@@ -57,8 +57,7 @@ app.get('/weather', (req, res) => {
                     status: 'ok',
                     address: req.query.address,
                     location,
-                    temperature,
-                    description
+                    str
                 })
             });
         })
