@@ -6,6 +6,7 @@ const forcast = require('./utils/forcast')
 const geocode = require('./utils/geocode')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 const staticPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -78,6 +79,6 @@ app.get('*', (req, res) =>
 })
 )
 
-app.listen(3000, () => {
-    console.log('Launged')
+app.listen(port, () => {
+    console.log('Launged ' + port)
 })
